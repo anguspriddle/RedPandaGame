@@ -7,9 +7,9 @@ public class PlayerMove : MonoBehaviour
     public float horizontalInput;
     public bool onGround = true;
     private Rigidbody playerRb;
-    public float jumpForce;
+    private float jumpForce = 10.0f;
     public float speed = 10.0f;
-    public float gravityModifier;
+    private float gravityModifier = 1.0f;
     
   
     // Start is called before the first frame update
@@ -29,6 +29,11 @@ public class PlayerMove : MonoBehaviour
         }
         horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * horizontalInput * speed * Time.deltaTime);
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+
+        }
+    
         playerRb.angularVelocity = Vector3.zero;
     }
     private void OnCollisionEnter(Collision collision)
