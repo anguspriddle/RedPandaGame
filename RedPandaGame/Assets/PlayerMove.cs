@@ -27,14 +27,14 @@ public class PlayerMove : MonoBehaviour
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             onGround = false;
         }
+     
+    
+     
         horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * horizontalInput * speed * Time.deltaTime);
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-
-        }
     
         playerRb.angularVelocity = Vector3.zero;
+       
     }
     private void OnCollisionEnter(Collision collision)
     {
