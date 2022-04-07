@@ -9,7 +9,8 @@ public class Apple : MonoBehaviour
     public Vector3 applePos;
     public float amplitude = 0.5f;
     public float frequency = 1f;
-    private int Score = 0;
+    public int Score = 0;
+    private GameManager gameManager;
     // Position Storage Variables
     Vector3 posOffset = new Vector3();
     Vector3 tempPos = new Vector3();
@@ -18,6 +19,7 @@ public class Apple : MonoBehaviour
     void Start()
     {
         posOffset = transform.position;
+        gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -35,6 +37,6 @@ public class Apple : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         Destroy(gameObject);
-        ++Score;
+        gameManager.UpdateScore(5);
     }
 }

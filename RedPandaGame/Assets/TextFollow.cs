@@ -15,5 +15,6 @@ public class TextFollow : MonoBehaviour
     void Update()
     {
         transform.position = player.transform.position + new Vector3(-10, 10, -10);
+       
     }
 }
