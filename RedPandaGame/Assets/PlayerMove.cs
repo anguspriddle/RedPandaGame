@@ -9,7 +9,8 @@ public class PlayerMove : MonoBehaviour
     private Rigidbody playerRb;
     private float jumpForce = 10.0f;
     public float speed = 10.0f;
-    private float gravityModifier = 1.0f;
+    private float gravityModifier = 1f;
+    private float jumpAmount = 0;
     
   
     // Start is called before the first frame update
@@ -22,9 +23,10 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && onGround) // This adds jump button, puts it on space
+        if (Input.GetKeyDown(KeyCode.Space) && jumpAmount < 2) // This adds jump button, puts it on space
         {
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            jumpAmount += 1;
             onGround = false;
         }
      
@@ -38,6 +40,7 @@ public class PlayerMove : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
+        jumpAmount = 0;
         onGround = true;
     }
 }
