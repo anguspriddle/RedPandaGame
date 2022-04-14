@@ -19,9 +19,7 @@ public class Apple : MonoBehaviour
     void Start()
     {
         posOffset = transform.position;
-        gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -37,6 +35,6 @@ public class Apple : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         Destroy(gameObject);
-        gameManager.UpdateScore(5);
+        gameManager.UpdateScore(1);
     }
 }
