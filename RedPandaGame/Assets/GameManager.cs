@@ -7,10 +7,11 @@ public class GameManager : MonoBehaviour
 {
     public float time = 240.0f;
     public TextMeshProUGUI timerText;
+    public int score = 0;
     // Start is called before the first frame update
     void Start()
     {
-        
+      
     }
 
 

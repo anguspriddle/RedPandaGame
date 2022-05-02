@@ -10,7 +10,7 @@ public class Apple : MonoBehaviour
     public float amplitude = 0.5f;
     public float frequency = 1f;
     public int Score = 0;
-    private GameManager gameManager;
+    public GameManager gameManager;
     // Position Storage Variables
     Vector3 posOffset = new Vector3();
     Vector3 tempPos = new Vector3();
@@ -35,6 +35,7 @@ public class Apple : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         Destroy(gameObject);
-        Score += 1;
+        gameManager.score += 1;
+        Destroy(gameObject);
     }
 }
