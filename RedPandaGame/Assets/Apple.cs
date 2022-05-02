@@ -35,6 +35,6 @@ public class Apple : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         Destroy(gameObject);
-        gameManager.UpdateScore(1);
+        Score += 1;
     }
 }

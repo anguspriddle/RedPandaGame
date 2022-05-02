@@ -5,24 +5,21 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    private int score;
-    public TextMeshProUGUI scoreText;
+    public float time = 240.0f;
+    public TextMeshProUGUI timerText;
     // Start is called before the first frame update
     void Start()
     {
-        UpdateScore(0);
+        
     }
 
 
     // Update is called once per frame
     void Update()
     {
-        
+        time -= Time.deltaTime;
+        timerText.text = "Time: " + time;
     }
 
-    public void  UpdateScore(int scoreToAdd)
-    {
-        score += scoreToAdd;
-        scoreText.text = "Score: " + score;
-    }
+
 }
