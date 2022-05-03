@@ -11,9 +11,8 @@ public class PlayerMove : MonoBehaviour
     public float speed = 10.0f;
     private float gravityModifier = 1f;
     private float jumpAmount = 0;
-    private DoubleJump Double Jump;
-    
-  
+    public GameManager gameManager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +30,11 @@ public class PlayerMove : MonoBehaviour
             onGround = false;
         }
      
-    
+        if (transform.position.y <= -30)
+        {
+            Destroy(gameObject);
+            Debug.Log("Dead");
+        }
      
         horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * horizontalInput * speed * Time.deltaTime);
@@ -39,13 +42,9 @@ public class PlayerMove : MonoBehaviour
         playerRb.angularVelocity = Vector3.zero;
        
     }
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision col)
     {
         jumpAmount = 0;
         onGround = true;
-        if (Collision.gameObject.tag == "Double Jump")
-        {
-            jumpAmount = jumpAmount + 1;
-        }
     }
 }
