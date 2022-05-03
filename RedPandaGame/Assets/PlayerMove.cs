@@ -11,6 +11,7 @@ public class PlayerMove : MonoBehaviour
     public float speed = 10.0f;
     private float gravityModifier = 1f;
     private float jumpAmount = 0;
+    private DoubleJump Double Jump;
     
   
     // Start is called before the first frame update
@@ -42,5 +43,9 @@ public class PlayerMove : MonoBehaviour
     {
         jumpAmount = 0;
         onGround = true;
+        if (Collision.gameObject.tag == "Double Jump")
+        {
+            jumpAmount = jumpAmount + 1;
+        }
     }
 }
