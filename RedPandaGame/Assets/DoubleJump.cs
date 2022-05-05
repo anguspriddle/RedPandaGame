@@ -5,6 +5,7 @@ using UnityEngine;
 public class DoubleJump : MonoBehaviour
 {
     public PlayerMove player;
+    public GameObject powerup;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,13 +15,12 @@ public class DoubleJump : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-     
+       
     }
 
-    void OnCollisionrEnter(Collision col)
+    void OnTriggerEnter(Collider other)
     {
-        player.jumpAmount += 1;
-        Destroy(gameObject);
+        player.TripleJump = true;
     }
 
 }
