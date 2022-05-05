@@ -9,8 +9,8 @@ public class PlayerMove : MonoBehaviour
     private Rigidbody playerRb;
     private float jumpForce = 10.0f;
     public float speed = 10.0f;
-    private float gravityModifier = 1f;
-    private float jumpAmount = 0;
+    private float gravityModifier = 1.5f;
+    public float jumpAmount = 0;
     public GameManager gameManager;
 
     // Start is called before the first frame update
@@ -21,7 +21,7 @@ public class PlayerMove : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void Update()   
     {
         if (Input.GetKeyDown(KeyCode.Space) && jumpAmount < 2) // This adds jump button, puts it on space
         {
