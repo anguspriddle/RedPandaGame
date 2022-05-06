@@ -21,6 +21,7 @@ public class DoubleJump : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         player.TripleJump = true;
+        Destroy(gameObject);
     }
 
 }
