@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DoubleJump : MonoBehaviour
 {
-    public PlayerMove player;
+    public Player player;
     public GameObject powerup;
     // Start is called before the first frame update
     void Start()

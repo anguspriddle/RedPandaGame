@@ -5,7 +5,7 @@ using UnityEngine;
 public class FollowPlayer : MonoBehaviour
 {
     public GameObject player;
-    public PlayerMove player1;
+    public Player player1;
     public Vector3 offset;
     public bool follow = true;
     // Start is called before the first frame update
@@ -21,10 +21,7 @@ public class FollowPlayer : MonoBehaviour
         {
             transform.position = player.transform.position + new Vector3(0, 2, -40);
         }
-        if (player1.dead == true)
-        {
-            follow = false;
-        }
+        
 
     }
 }

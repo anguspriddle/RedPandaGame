@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMove : MonoBehaviour
+public class Player : MonoBehaviour
 {
     public float horizontalInput;
     public bool onGround = true;
@@ -14,6 +14,7 @@ public class PlayerMove : MonoBehaviour
     public GameManager gameManager;
     public bool TripleJump;
     public bool dead;
+    public FollowPlayer CameraPlayer;
 
     // Start is called before the first frame update
     void Start()
@@ -41,7 +42,7 @@ public class PlayerMove : MonoBehaviour
         if (transform.position.y <= -30)
         {
             gameManager.GameOver();
-            dead = true;
+            CameraPlayer.follow = false;
         }
         if (transform.position.y <= -80)
         {
@@ -51,6 +52,15 @@ public class PlayerMove : MonoBehaviour
         if (gameManager.time <= 0)
         {
             gameManager.GameOver();
+            Destroy(gameObject);
+            CameraPlayer.follow = false;
+        }
+
+        if (gameManager.lives == 0)
+        {
+            gameManager.GameOver();
+            CameraPlayer.follow = false;
+            Destroy(gameObject);
         }
 
         horizontalInput = Input.GetAxis("Horizontal");

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Apple : MonoBehaviour
+public class OneUp : MonoBehaviour
 {
     private float speed = 1.0f;
     private Vector3 applePos;
@@ -24,7 +24,7 @@ public class Apple : MonoBehaviour
         transform.Rotate(0, speed, 0);
         temPos = posOffset;
         temPos.y += Mathf.Sin(Time.fixedTime * Mathf.PI * frequency) * amplitude;
-            
+
         transform.position = temPos;
 
     }
@@ -33,7 +33,6 @@ public class Apple : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         Destroy(gameObject);
-        gameManager.score += 1;
-        Destroy(gameObject);
+        gameManager.lives += 1;
     }
 }
