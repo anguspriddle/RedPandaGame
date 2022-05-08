@@ -3715,7 +3715,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2252172150461376889, guid: b7247f8c92ee43744a332b88f9ff7334, type: 3}
       propertyPath: m_Name
-      value: AppleDouble (2)
+      value: ThreePointApple
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7247f8c92ee43744a332b88f9ff7334, type: 3}
@@ -5549,7 +5549,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 329620476}
-  player1: {fileID: 1591837935}
   offset: {x: 0, y: 0, z: 0}
   follow: 1
 --- !u!54 &963194232
@@ -5625,7 +5624,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2252172150461376889, guid: b7247f8c92ee43744a332b88f9ff7334, type: 3}
       propertyPath: m_Name
-      value: AppleDouble (1)
+      value: ThreePointApple
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7247f8c92ee43744a332b88f9ff7334, type: 3}
@@ -7941,7 +7940,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2252172150461376889, guid: b7247f8c92ee43744a332b88f9ff7334, type: 3}
       propertyPath: m_Name
-      value: AppleDouble
+      value: ThreePointApple
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7247f8c92ee43744a332b88f9ff7334, type: 3}
@@ -8420,7 +8419,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2252172150461376889, guid: b7247f8c92ee43744a332b88f9ff7334, type: 3}
       propertyPath: m_Name
-      value: AppleDouble
+      value: ThreePointApple
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7247f8c92ee43744a332b88f9ff7334, type: 3}
@@ -10762,7 +10761,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2252172150461376889, guid: b7247f8c92ee43744a332b88f9ff7334, type: 3}
       propertyPath: m_Name
-      value: AppleDouble
+      value: ThreePointApple
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7247f8c92ee43744a332b88f9ff7334, type: 3}
@@ -13242,7 +13241,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2252172150461376889, guid: b7247f8c92ee43744a332b88f9ff7334, type: 3}
       propertyPath: m_Name
-      value: AppleDouble (1)
+      value: ThreePointApple
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7247f8c92ee43744a332b88f9ff7334, type: 3}
@@ -13410,7 +13409,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2252172150461376889, guid: b7247f8c92ee43744a332b88f9ff7334, type: 3}
       propertyPath: m_Name
-      value: AppleDouble
+      value: ThreePointApple
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7247f8c92ee43744a332b88f9ff7334, type: 3}

@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DoublePointApple : MonoBehaviour
+public class ThreePointApple : MonoBehaviour
 {
+    // Three Point Apple Variables
     public float speed = 1.0f;
     public float bounceSpeed = 1.0f;
     public Vector3 applePos;
@@ -11,7 +12,7 @@ public class DoublePointApple : MonoBehaviour
     public float frequency = 1f;
     public int Score = 0;
     public GameManager gameManager;
-    // Position Storage Variables
+    // Position Variables
     Vector3 posOffset = new Vector3();
     Vector3 tempPos = new Vector3();
 
@@ -23,7 +24,9 @@ public class DoublePointApple : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // This rotates the apple around the y-axis
         transform.Rotate(0, speed, 0);
+        // This makes the apple go up and down over a fixed speed, creating a floating effect
         tempPos = posOffset;
         tempPos.y += Mathf.Sin(Time.fixedTime * Mathf.PI * frequency) * amplitude;
 
@@ -31,7 +34,8 @@ public class DoublePointApple : MonoBehaviour
 
     }
 
-
+    // This function happens when the power up is collided with the player.
+    // This will increase the player's score by 3 upon collision with player.
     void OnTriggerEnter(Collider other)
     {
         Destroy(gameObject);
