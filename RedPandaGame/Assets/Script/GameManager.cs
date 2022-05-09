@@ -8,13 +8,15 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     // Game Manager Variables
-    public float time = 300.0f;
+    public float time = 240.0f;
     public TextMeshProUGUI timerText; // This calls in text to be assigned to a variable.
     public int score = 0;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI gameOverText;
     public TextMeshProUGUI instructionsText;
     public GameObject restartButton;
+    public GameObject scoreLivesBackdrop;
+    public GameObject timeBackdrop;
     public int lives = 3;
     public TextMeshProUGUI livesText;
     // Start is called before the first frame update
