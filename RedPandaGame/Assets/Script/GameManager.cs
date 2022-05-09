@@ -47,6 +47,8 @@ public class GameManager : MonoBehaviour
         scoreText.gameObject.SetActive(false);
         timerText.gameObject.SetActive(false);
         livesText.gameObject.SetActive(false);
+        scoreLivesBackdrop.gameObject.SetActive(false);
+        timeBackdrop.gameObject.SetActive(false);
         // This will display the restart button
         restartButton.gameObject.SetActive(true);   
     }
